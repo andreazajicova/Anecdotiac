@@ -1,0 +1,27 @@
+<%= form_with(model: anecdote, local: true) do |form| %>
+  <% if anecdote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(anecdote.errors.count, "error") %> prohibited this anecdote from being saved:</h2>
+
+      <ul>
+      <% anecdote.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <h3>Anecdote Title:</h3>
+    <%= form.text_field :title, class: "form-control input-lg", placeholder: 'Funny Day' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :anecdote_body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

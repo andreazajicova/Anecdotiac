@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @anecdote.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @anecdote.body %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @anecdote.user %>
+</p>
+
+<%= link_to 'Edit', edit_anecdote_path(@anecdote) %> |
+<%= link_to 'Back', anecdotes_path %>

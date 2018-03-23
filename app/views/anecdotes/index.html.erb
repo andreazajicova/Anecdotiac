@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Anecdotes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @anecdotes.each do |anecdote| %>
+      <tr>
+        <td><%= anecdote.title %></td>
+        <td><%= anecdote.body %></td>
+        <td><%= anecdote.user.email %></td>
+        <td><%= link_to 'Show', anecdote %></td>
+        <td><%= link_to 'Edit', edit_anecdote_path(anecdote) %></td>
+        <td><%= link_to 'Destroy', anecdote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Anecdote', new_anecdote_path %>
