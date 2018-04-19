@@ -17,10 +17,15 @@
   </div>
 
   <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body, id: :anecdote_body %>
+    <h4>Anecdote Text:</h4>
+    <%= form.text_area :body, class: "form-control input-lg", placeholder: 'Today my mother asked me...' %>
   </div>
-
+  <br>
+  
+  <div class="form-group">
+  <h5>Upload image</h5>
+  <%= form.file_field :anecdote_image, id:"file-input", class: "form-control input-lg" %>
+</div>
   <div class="actions">
     <%= form.submit %>
   </div>

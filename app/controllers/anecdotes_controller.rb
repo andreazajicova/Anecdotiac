@@ -70,6 +70,6 @@ class AnecdotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def anecdote_params
-      params.require(:anecdote).permit(:title, :body, :user_id)
+      params.require(:anecdote).permit(:title, :body, :user_id, :anecdote_image)
     end
 end
