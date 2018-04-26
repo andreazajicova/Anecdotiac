@@ -1,5 +1,6 @@
 class Anecdote < ApplicationRecord
   belongs_to :user
+  has_many :ratings
   
   has_attached_file :anecdote_image, styles: {
     thumb: '100x100>',

@@ -11,6 +11,9 @@ class AnecdotesController < ApplicationController
   # GET /anecdotes/1
   # GET /anecdotes/1.json
   def show
+    @anecdote = Anecdote.find(params[:id])
+    
+    @ratings = @anecdote.ratings.reverse_order
   end
 
   # GET /anecdotes/new

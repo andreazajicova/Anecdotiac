@@ -22,7 +22,7 @@
         <button type="submit" class="btn btn-primary">Search</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to 'All Anecdotes', anecdotes_path %></li>
+          <li><%= link_to 'Anecdotes Categories', anecdotes_path %></li>
           <li><%= link_to 'Post Anecdote', new_anecdote_path %></li>
           <% if !user_signed_in? %>
            <li><%= link_to 'Register', new_user_registration_path %></li>

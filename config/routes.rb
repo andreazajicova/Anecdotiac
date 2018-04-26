@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :anecdotes
+
+  resources :anecdotes do
+    resources :ratings
+end 
   devise_for :users
   root 'pages#home'
 
