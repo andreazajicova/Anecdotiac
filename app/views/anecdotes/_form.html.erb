@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="form-group">
-    <h3>Anecdote Title:</h3>
+    <h4>Anecdote Title:</h4>
     <%= form.text_field :title, class: "form-control input-lg", placeholder: 'Funny Day' %>
   </div>
 
@@ -23,11 +23,11 @@
   <br>
   
   <div class="form-group">
-  <h5>Upload image</h5>
+  <h4>Upload image</h4>
   <%= form.file_field :anecdote_image, id:"file-input", class: "form-control input-lg" %>
 </div>
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit 'Post Anecdote', class: 'btn btn-primary btn-lg' %>
   </div>
 <% end %>
 

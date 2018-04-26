@@ -1,3 +1,5 @@
+
+<div class="container">
 <p id="notice"><%= notice %></p>
 
 <h1>Anecdotes</h1>
@@ -15,7 +17,7 @@
   <tbody>
     <% @anecdotes.each do |anecdote| %>
       <tr>
-        <td><%= anecdote.title %></td>
+        <td><%= anecdote.title %></td> 
         <td><%= anecdote.body %></td>
         <td><%= anecdote.user.email %></td>
         <td><%= link_to 'Show', anecdote %></td> 
@@ -29,4 +31,4 @@
 <br>
 
 <%= link_to 'New Anecdote', new_anecdote_path %>
-
+</div>
