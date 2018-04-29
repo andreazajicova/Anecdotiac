@@ -10,5 +10,6 @@ resources :users
   root 'pages#home'
 
 get 'about' => 'pages#about'
+get 'categories/friends_anecdotes' => 'pages#friends_anecdotes'
   
 end

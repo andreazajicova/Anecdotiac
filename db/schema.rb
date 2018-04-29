@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180426170410) do
+ActiveRecord::Schema.define(version: 20180429111817) do
 
   create_table "anecdotes", force: :cascade do |t|
     t.string "title"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20180426170410) do
     t.string "anecdote_image_content_type"
     t.integer "anecdote_image_file_size"
     t.datetime "anecdote_image_updated_at"
+    t.string "category"
     t.index ["user_id"], name: "index_anecdotes_on_user_id"
   end
 
